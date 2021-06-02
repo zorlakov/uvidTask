@@ -14,8 +14,6 @@ function solveTask() {
         'Unos mora sadržavati samo brojeve odvojene razmakom!';
       document.getElementById('output').classList.add('bad');
       document.getElementById('output').classList.remove('good');
-
-      console.log('doso ovdje treba biti kraj');
       return;
     }
   }
@@ -23,14 +21,12 @@ function solveTask() {
   for (let i = 0; i < array.length; i++) {
     arraySum += parseInt(array[i]);
   }
-  console.log('eo full sume  ', arraySum);
   let currentSum = 0;
   for (let i = 0; i < array.length; i++) {
     if (currentSum * 2 + parseInt(array[i]) == arraySum) {
       document.getElementById('output').classList.remove('bad');
       document.getElementById('output').classList.add('good');
       document.getElementById('output').innerHTML = 'Rjesenje je: ' + i;
-      console.log(i);
       return;
     } else if (i == array.length) {
       document.getElementById('output').innerHTML = 'nema rjesenja';
